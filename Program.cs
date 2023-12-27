@@ -32,6 +32,7 @@ app.MapPost("/produtos", (ProdutoRequest produtoRequest, ApplicationDbContext co
     return Results.Created($"/produtos/{produto.Id}", produto.Id);
 });
 
+
 //SELECT/ID
 //api.app.com/user/{code}
 app.MapGet("/produtos/{id}", ([FromRoute] int id, ApplicationDbContext context) =>{
